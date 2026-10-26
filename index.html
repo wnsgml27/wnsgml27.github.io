@@ -1,20 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Junehee</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junehee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-    <h1>Hi, I'm Junehee!</h1>
-    <p>And I like to...</p>
-    <nav>
-        <a href="about/">about</a>
-        <a href="projects/">projects</a>
-        <a href="kitchen/">kitchen</a>
-        <a href="bookmarks/">bookmarks</a>
+<!--
+  Every page lives in this one file for now: each <section class="view">
+  is shown or hidden by main.js based on the #hash in the URL
+  (#about, #projects, #bookmarks, #kitchen).
+-->
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="#home">junehee<span>.io</span></a>
+    <nav class="top" aria-label="Main">
+      <a href="#about" data-view="about"><span class="key">[A]</span> about</a>
+      <a href="#projects" data-view="projects"><span class="key">[P]</span> projects</a>
+      <a href="#bookmarks" data-view="bookmarks"><span class="key">[L]</span> bookmarks</a>
+      <a href="#kitchen" data-view="kitchen" class="nav-kitchen" hidden><span class="key">[K]</span> kitchen</a>
     </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- ===== HOME (index.html) ===== -->
+    <section class="view" id="view-home" data-title="home">
+      <div class="stack">
+        <h1 class="hello reveal">Hi, I'm Junehee<span class="wave">!</span></h1>
+        <p class="lede reveal">I study math and computer science, build small things on the web, and cook a lot. This line is a placeholder for your own intro.</p>
+      </div>
+      <nav class="home-links reveal" aria-label="Sections">
+        <a class="slide-link" href="#about"><span class="key">[A]</span> about</a>
+        <a class="slide-link" href="#projects"><span class="key">[P]</span> projects</a>
+        <a class="slide-link" href="#bookmarks"><span class="key">[L]</span> bookmarks</a>
+      </nav>
+      <div class="now reveal">
+        <p class="eyebrow">now</p>
+        <ul>
+          <li><span>building</span><span>this site, one HTML tag at a time</span></li>
+          <li><span>learning</span><span>HTML, then CSS, then JavaScript, then TypeScript</span></li>
+          <li><span>playing</span><span>Pump It Up</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT (about/index.html) ===== -->
+    <section class="view" id="view-about" data-title="about" hidden>
+      <div class="stack">
+        <p class="eyebrow reveal">about</p>
+        <h1 class="page-title reveal">A bit about me</h1>
+      </div>
+      <div class="about-grid">
+        <div class="photo reveal">your photo</div>
+        <div class="about-text">
+          <p class="reveal">Placeholder: write two or three sentences here. What you study, what you like building, and what you're cooking lately.</p>
+          <p class="reveal">Placeholder: a second short paragraph. Maybe where you're based, or what you'd like people to reach out about.</p>
+          <div class="contact reveal">
+            <div><span class="muted">github</span><a class="slide-link" href="https://github.com/wnsgml27">wnsgml27</a></div>
+            <div><span class="muted">email</span><span>add yours here</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS (projects/index.html) ===== -->
+    <section class="view" id="view-projects" data-title="projects" hidden>
+      <div class="stack">
+        <p class="eyebrow reveal">projects</p>
+        <h1 class="page-title reveal">Things I've made</h1>
+      </div>
+
+      <div>
+        <div class="tabs reveal" role="tablist" aria-label="Project type">
+          <button class="tab" role="tab" id="tab-math" aria-controls="panel-math" aria-selected="true" type="button"><span class="key">[M]</span> math</button>
+          <button class="tab" role="tab" id="tab-cs" aria-controls="panel-cs" aria-selected="false" type="button"><span class="key">[C]</span> cs</button>
+        </div>
+      </div>
+
+      <div class="cards" role="tabpanel" id="panel-math" aria-labelledby="tab-math">
+        <a class="card reveal" href="#projects">
+          <h3>Proof notebook <span class="chip">example</span></h3><time>2026</time>
+          <p>Clean write-ups of proofs I found hard, with the one idea that made each click.</p>
+          <span class="go">read →</span>
+        </a>
+        <a class="card reveal" href="#projects">
+          <h3>Drawing Fourier series <span class="chip">example</span></h3><time>2026</time>
+          <p>An interactive sketch where circles on circles trace out any shape you draw.</p>
+          <span class="go">open →</span>
+        </a>
+        <a class="card reveal" href="#projects">
+          <h3>Project Euler log <span class="chip">example</span></h3><time>2025</time>
+          <p>Problems solved so far, with short notes on the trick behind each one.</p>
+          <span class="go">read →</span>
+        </a>
+        <a class="card reveal" href="#projects">
+          <h3>Probability puzzles <span class="chip">example</span></h3><time>2025</time>
+          <p>A small collection of puzzles where the obvious answer is wrong.</p>
+          <span class="go">read →</span>
+        </a>
+      </div>
+
+      <div class="cards" role="tabpanel" id="panel-cs" aria-labelledby="tab-cs" hidden>
+        <a class="card reveal" href="https://github.com/wnsgml27/wnsgml27.github.io">
+          <h3>junehee.io</h3><time>2026</time>
+          <p>This website. Plain HTML, CSS and a little JavaScript, hosted on GitHub Pages.</p>
+          <span class="go">code →</span>
+        </a>
+        <a class="card reveal" href="#projects">
+          <h3>Step chart reader <span class="chip">example</span></h3><time>2026</time>
+          <p>Reads a Pump It Up chart file and counts steps, jumps and holds.</p>
+          <span class="go">code →</span>
+        </a>
+        <a class="card reveal" href="#projects">
+          <h3>Terminal to-do list <span class="chip">example</span></h3><time>2025</time>
+          <p>A tiny command-line app, my first program with tests.</p>
+          <span class="go">code →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== BOOKMARKS (bookmarks/index.html) ===== -->
+    <section class="view" id="view-bookmarks" data-title="bookmarks" hidden>
+      <div class="stack">
+        <p class="eyebrow reveal">bookmarks</p>
+        <h1 class="page-title reveal">Links I keep coming back to</h1>
+        <p class="lede reveal">Grouped by topic, one line on why. The notes here are placeholders.</p>
+      </div>
+
+      <div class="topic">
+        <h2 class="reveal">sites i like</h2>
+        <ul class="marks">
+          <li class="reveal"><a class="slide-link" href="https://gloria.ma">gloria.ma</a><span>The friendly intro and lowercase links on my home page came from here.</span></li>
+          <li class="reveal"><a class="slide-link" href="https://www.wanqizhu.com">wanqizhu.com</a><span>A books list with a note on each, the idea behind this page.</span></li>
+          <li class="reveal"><a class="slide-link" href="https://claude.dev/terminal">claude.dev/terminal</a><span>Terminal style, keyboard shortcuts in the menu.</span></li>
+          <li class="reveal"><a class="slide-link" href="https://www.fixchocolatier.com">fixchocolatier.com</a><span>Dynamic but smooth. The motion on this site is modeled on it.</span></li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h2 class="reveal">math</h2>
+        <ul class="marks">
+          <li class="reveal"><a class="slide-link" href="https://www.3blue1brown.com">3blue1brown</a><span>Example note: animations that make linear algebra visible.</span></li>
+          <li class="reveal"><a class="slide-link" href="https://projecteuler.net">Project Euler</a><span>Example note: math problems you solve with code.</span></li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h2 class="reveal">cs</h2>
+        <ul class="marks">
+          <li class="reveal"><a class="slide-link" href="https://developer.mozilla.org">MDN Web Docs</a><span>Example note: where to look up any HTML tag or CSS property.</span></li>
+          <li class="reveal"><a class="slide-link" href="https://git-scm.com/book">Pro Git</a><span>Example note: the free book on how git actually works.</span></li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h2 class="reveal">food</h2>
+        <ul class="marks">
+          <li class="reveal"><a class="slide-link" href="https://www.seriouseats.com">Serious Eats</a><span>Example note: recipes that explain why each step matters.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== KITCHEN (kitchen/index.html, encrypted with StatiCrypt on the real site) ===== -->
+    <section class="view" id="view-kitchen" data-title="kitchen" hidden>
+      <div class="stack">
+        <p class="eyebrow reveal">kitchen · full mode</p>
+        <h1 class="page-title reveal">What I've been cooking</h1>
+      </div>
+
+      <!-- Mock of the StatiCrypt password box. The demo password is "demo". -->
+      <div class="lock reveal" id="lock">
+        <h2>This page is protected</h2>
+        <p class="muted">Enter the password to see the kitchen.</p>
+        <form id="lock-form">
+          <input id="lock-pass" type="password" autocomplete="off" placeholder="password" aria-label="Password">
+          <button class="btn" type="submit">unlock</button>
+        </form>
+        <p class="error" id="lock-error" aria-live="polite"></p>
+      </div>
+
+      <div class="grid" id="kitchen-grid" hidden></div>
+    </section>
+
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Junehee · junehee.io</span>
+    <div class="pad" aria-label="Secret pad">
+      <button type="button" data-pad="T" aria-label="up left"></button>
+      <button type="button" data-pad="Y" aria-label="up right"></button>
+      <button type="button" data-pad="G" aria-label="center"></button>
+      <button type="button" data-pad="V" aria-label="down left"></button>
+      <button type="button" data-pad="B" aria-label="down right"></button>
+    </div>
+  </div>
+</footer>
+
+<!-- The step chart. Hidden until someone presses V (the first step).
+     Only arrows are shown, never the keyboard letters. -->
+<div class="chart" id="chart" aria-hidden="true">
+  <p class="chart-label">step chart</p>
+  <p class="chart-steps" id="chart-steps"></p>
+</div>
+
+<div class="toast" id="toast" role="status"><b>FULL</b> MODE</div>
+
+<dialog id="dish-dialog">
+  <div class="stack">
+    <h2 id="dish-name"></h2>
+    <p class="muted" id="dish-note"></p>
+    <form method="dialog"><button class="btn" type="submit">close</button></form>
+  </div>
+</dialog>
+
+<script src="main.js"></script>
 </body>
 </html>
