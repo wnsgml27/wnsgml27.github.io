@@ -8,9 +8,9 @@
   --line: #e3e1e5;        /* borders and dividers */
   --accent: #7c5cc4;      /* the one accent: lavender, deep enough that text stays readable */
   --accent-soft: #eee8fb; /* accent tint for chips and highlights */
---night: #121016;       /* FULL MODE background */
---night-glow: #3b2a66;  /* FULL MODE center glow */
---glow: #c9b6ff;        /* bright lavender for FULL MODE text and rings */
+  --night: #121016;       /* FULL MODE background */
+  --night-glow: #3b2a66;  /* FULL MODE center glow */
+  --glow: #c9b6ff;        /* bright lavender for FULL MODE text and rings */
 
   /* fonts */
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
