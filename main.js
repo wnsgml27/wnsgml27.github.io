@@ -190,8 +190,8 @@ document.querySelectorAll(".pad button").forEach(btn => {
 });
 
 // ---------------------------------------------------------------
-// 5. Kitchen. A mock of StatiCrypt: the right password shows the grid.
-//    (Real StatiCrypt decrypts the page in the browser instead.)
+// 5. Kitchen photo grid. Each dish is one tile; click it for the note.
+//    Swap the colors for real photos later.
 // ---------------------------------------------------------------
 const dishes = [
   { name: "Kimchi fried rice", note: "Example note: day-old rice, a fried egg on top.", colors: ["#d9482b", "#f2a541"] },
@@ -218,28 +218,11 @@ function buildKitchenGrid() {
     });
     grid.appendChild(tile);
   }
-  grid.hidden = false;
-  setupReveals(grid);
 }
-
-document.getElementById("lock-form").addEventListener("submit", e => {
-  e.preventDefault();
-  const lock = document.getElementById("lock");
-  const pass = document.getElementById("lock-pass");
-  if (pass.value === "demo") {
-    lock.hidden = true;
-    buildKitchenGrid();
-  } else {
-    document.getElementById("lock-error").textContent = "Wrong password. Try again.";
-    lock.classList.remove("shake");
-    void lock.offsetWidth;
-    lock.classList.add("shake");
-    pass.select();
-  }
-});
 
 // ---------------------------------------------------------------
 // Start
 // ---------------------------------------------------------------
 // nothing is saved, so every reload starts in basic mode
+buildKitchenGrid();
 showView(location.hash.slice(1));

@@ -183,26 +183,13 @@ main .wrap { padding-block: clamp(40px, 9vw, 96px) 72px; }
 .marks a { font-weight: 500; overflow-wrap: anywhere; }
 .marks span { color: var(--muted); min-width: 0; }
 
-/* ---------- kitchen: StatiCrypt-style lock + photo grid ---------- */
-.lock {
-  max-width: 380px; display: grid; gap: 14px; padding: 28px;
-  border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
-}
-.lock h2 { font-size: 1.25rem; }
-.lock form { display: flex; gap: 8px; flex-wrap: wrap; }
-.lock input {
-  flex: 1 1 160px; min-width: 0; font: inherit; font-family: var(--mono); font-size: 15px; color: var(--fg);
-  background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px;
-}
-.lock input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* ---------- kitchen: photo grid ---------- */
 .btn {
   font: inherit; font-family: var(--mono); font-size: 14px; cursor: pointer;
   color: var(--bg); background: var(--fg); border: 0; border-radius: 8px; padding: 9px 16px;
   transition: background-color var(--fast) var(--ease);
 }
 .btn:hover { background: var(--accent); }
-.lock .error { color: var(--accent); font-family: var(--mono); font-size: 13px; min-height: 1.2em; }
-.lock.shake { animation: shake 0.4s var(--ease); }
 @keyframes shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
 
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }

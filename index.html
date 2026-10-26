@@ -168,25 +168,14 @@
       </div>
     </section>
 
-    <!-- ===== KITCHEN (kitchen/index.html, encrypted with StatiCrypt on the real site) ===== -->
+    <!-- ===== KITCHEN (kitchen/index.html): only reachable after FULL MODE ===== -->
     <section class="view" id="view-kitchen" data-title="kitchen" hidden>
       <div class="stack">
         <p class="eyebrow reveal">kitchen · full mode</p>
         <h1 class="page-title reveal">What I've been cooking</h1>
       </div>
 
-      <!-- Mock of the StatiCrypt password box. The demo password is "demo". -->
-      <div class="lock reveal" id="lock">
-        <h2>This page is protected</h2>
-        <p class="muted">Enter the password to see the kitchen.</p>
-        <form id="lock-form">
-          <input id="lock-pass" type="password" autocomplete="off" placeholder="password" aria-label="Password">
-          <button class="btn" type="submit">unlock</button>
-        </form>
-        <p class="error" id="lock-error" aria-live="polite"></p>
-      </div>
-
-      <div class="grid" id="kitchen-grid" hidden></div>
+      <div class="grid" id="kitchen-grid"></div>
     </section>
 
   </div>
