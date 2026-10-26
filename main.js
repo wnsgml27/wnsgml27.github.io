@@ -133,7 +133,7 @@ function padStep(key) {
 
   if (done === SECRET.length) {
     unlockFullMode();
-    closeChart(700);
+    closeChart(150);
   } else if (done === 0) {
     // wrong step: shake and go away
     chart.classList.remove("miss");
@@ -147,14 +147,26 @@ function padStep(key) {
 
 function unlockFullMode() {
   recent = [];
-  const toast = document.getElementById("toast");
-  toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 2200);
+  // play the big animation (remove + re-add the class so it can replay)
+  const fm = document.getElementById("fullmode");
+  fm.classList.remove("play");
+  document.body.classList.remove("shake-page");
+  void fm.offsetWidth;
+  fm.classList.add("play");
+  document.body.classList.add("shake-page");
+  setTimeout(() => {
+    fm.classList.remove("play");
+    document.body.classList.remove("shake-page");
+  }, 2700);
+
   if (unlocked) return;
   unlocked = true;
-  const link = document.querySelector(".nav-kitchen");
-  link.hidden = false;
-  link.classList.add("arrive");
+  // the kitchen link drops into the nav as the animation fades out
+  setTimeout(() => {
+    const link = document.querySelector(".nav-kitchen");
+    link.hidden = false;
+    link.classList.add("arrive");
+  }, 2100);
 }
 
 document.addEventListener("keydown", e => {
