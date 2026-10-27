@@ -193,13 +193,9 @@ document.querySelectorAll(".pad button").forEach(btn => {
 // 5. Kitchen photo grid. Each dish is one tile; click it for the note.
 //    Swap the colors for real photos later.
 // ---------------------------------------------------------------
+// Empty for now. Add one line per dish, for example:
+//   { name: "Dish name", note: "A short note or recipe.", colors: ["#d9482b", "#f2a541"] },
 const dishes = [
-  { name: "Kimchi fried rice", note: "Example note: day-old rice, a fried egg on top.", colors: ["#d9482b", "#f2a541"] },
-  { name: "Doenjang jjigae", note: "Example note: tofu, zucchini, a spoon of gochugaru.", colors: ["#8a5a2b", "#d8b26e"] },
-  { name: "Tomato egg stir-fry", note: "Example note: soft eggs, a little sugar.", colors: ["#e4572e", "#ffc857"] },
-  { name: "Banana bread", note: "Example note: brown butter, very ripe bananas.", colors: ["#7b4b2a", "#e0a96d"] },
-  { name: "Mapo tofu", note: "Example note: more Sichuan pepper than you think.", colors: ["#a4161a", "#e5383b"] },
-  { name: "Matcha latte", note: "Example note: whisk, don't stir.", colors: ["#4f772d", "#a7c957"] },
 ];
 
 function buildKitchenGrid() {

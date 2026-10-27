@@ -32,50 +32,34 @@
 
     <!-- ===== HOME (index.html) ===== -->
     <section class="view" id="view-home" data-title="home">
-      <div class="stack">
-        <h1 class="hello reveal">Hi, I'm Junehee<span class="wave">!</span></h1>
-        <p class="lede reveal">I study math and computer science, build small things on the web, and cook a lot. This line is a placeholder for your own intro.</p>
-      </div>
+      <h1 class="hello reveal">Hi, I'm Junehee<span class="wave">!</span></h1>
       <nav class="home-links reveal" aria-label="Sections">
         <a class="slide-link" href="#about"><span class="key">[A]</span> about</a>
         <a class="slide-link" href="#projects"><span class="key">[P]</span> projects</a>
         <a class="slide-link" href="#bookmarks"><span class="key">[L]</span> bookmarks</a>
       </nav>
-      <div class="now reveal">
-        <p class="eyebrow">now</p>
-        <ul>
-          <li><span>building</span><span>this site, one HTML tag at a time</span></li>
-          <li><span>learning</span><span>HTML, then CSS, then JavaScript, then TypeScript</span></li>
-          <li><span>playing</span><span>Pump It Up</span></li>
-        </ul>
-      </div>
     </section>
 
     <!-- ===== ABOUT (about/index.html) ===== -->
     <section class="view" id="view-about" data-title="about" hidden>
-      <div class="stack">
-        <p class="eyebrow reveal">about</p>
-        <h1 class="page-title reveal">A bit about me</h1>
-      </div>
+      <p class="eyebrow reveal">about</p>
+
+      <!-- Empty for now. Example layout, remove the comment marks to use it:
       <div class="about-grid">
-        <div class="photo reveal">your photo</div>
+        <img class="photo reveal" src="me.jpg" alt="Junehee">
         <div class="about-text">
-          <p class="reveal">Placeholder: write two or three sentences here. What you study, what you like building, and what you're cooking lately.</p>
-          <p class="reveal">Placeholder: a second short paragraph. Maybe where you're based, or what you'd like people to reach out about.</p>
+          <p class="reveal">A few sentences about you.</p>
           <div class="contact reveal">
-            <div><span class="muted">github</span><a class="slide-link" href="https://github.com/wnsgml27">wnsgml27</a></div>
-            <div><span class="muted">email</span><span>add yours here</span></div>
+            <div><span class="muted">github</span><a class="slide-link" href="https://github.com/your-name">your-name</a></div>
           </div>
         </div>
       </div>
+      -->
     </section>
 
     <!-- ===== PROJECTS (projects/index.html) ===== -->
     <section class="view" id="view-projects" data-title="projects" hidden>
-      <div class="stack">
-        <p class="eyebrow reveal">projects</p>
-        <h1 class="page-title reveal">Things I've made</h1>
-      </div>
+      <p class="eyebrow reveal">projects</p>
 
       <div>
         <div class="tabs reveal" role="tablist" aria-label="Project type">
@@ -84,54 +68,20 @@
         </div>
       </div>
 
-      <div class="cards" role="tabpanel" id="panel-math" aria-labelledby="tab-math">
-        <a class="card reveal" href="#projects">
-          <h3>Proof notebook <span class="chip">example</span></h3><time>2026</time>
-          <p>Clean write-ups of proofs I found hard, with the one idea that made each click.</p>
-          <span class="go">read →</span>
-        </a>
-        <a class="card reveal" href="#projects">
-          <h3>Drawing Fourier series <span class="chip">example</span></h3><time>2026</time>
-          <p>An interactive sketch where circles on circles trace out any shape you draw.</p>
-          <span class="go">open →</span>
-        </a>
-        <a class="card reveal" href="#projects">
-          <h3>Project Euler log <span class="chip">example</span></h3><time>2025</time>
-          <p>Problems solved so far, with short notes on the trick behind each one.</p>
-          <span class="go">read →</span>
-        </a>
-        <a class="card reveal" href="#projects">
-          <h3>Probability puzzles <span class="chip">example</span></h3><time>2025</time>
-          <p>A small collection of puzzles where the obvious answer is wrong.</p>
-          <span class="go">read →</span>
-        </a>
-      </div>
-
-      <div class="cards" role="tabpanel" id="panel-cs" aria-labelledby="tab-cs" hidden>
-        <a class="card reveal" href="https://github.com/wnsgml27/wnsgml27.github.io">
-          <h3>junehee.io</h3><time>2026</time>
-          <p>This website. Plain HTML, CSS and a little JavaScript, hosted on GitHub Pages.</p>
-          <span class="go">code →</span>
-        </a>
-        <a class="card reveal" href="#projects">
-          <h3>Step chart reader <span class="chip">example</span></h3><time>2026</time>
-          <p>Reads a Pump It Up chart file and counts steps, jumps and holds.</p>
-          <span class="go">code →</span>
-        </a>
-        <a class="card reveal" href="#projects">
-          <h3>Terminal to-do list <span class="chip">example</span></h3><time>2025</time>
-          <p>A tiny command-line app, my first program with tests.</p>
-          <span class="go">code →</span>
-        </a>
-      </div>
+      <!-- Empty for now. To add a project, put a card like this inside a panel below:
+      <a class="card reveal" href="https://example.com">
+        <h3>Project name</h3><time>2026</time>
+        <p>One line about it.</p>
+        <span class="go">open →</span>
+      </a>
+      -->
+      <div class="cards" role="tabpanel" id="panel-math" aria-labelledby="tab-math"></div>
+      <div class="cards" role="tabpanel" id="panel-cs" aria-labelledby="tab-cs" hidden></div>
     </section>
 
     <!-- ===== BOOKMARKS (bookmarks/index.html) ===== -->
     <section class="view" id="view-bookmarks" data-title="bookmarks" hidden>
-      <div class="stack">
-        <p class="eyebrow reveal">bookmarks</p>
-        <h1 class="page-title reveal">Links I keep coming back to</h1>
-      </div>
+      <p class="eyebrow reveal">bookmarks</p>
 
       <!-- Empty for now. To add a topic, copy this block and remove the comment marks:
       <div class="topic">
@@ -145,11 +95,9 @@
 
     <!-- ===== KITCHEN (kitchen/index.html): only reachable after FULL MODE ===== -->
     <section class="view" id="view-kitchen" data-title="kitchen" hidden>
-      <div class="stack">
-        <p class="eyebrow reveal">kitchen · full mode</p>
-        <h1 class="page-title reveal">What I've been cooking</h1>
-      </div>
+      <p class="eyebrow reveal">kitchen</p>
 
+      <!-- The photo tiles are made by main.js from the "dishes" list. -->
       <div class="grid" id="kitchen-grid"></div>
     </section>
 
